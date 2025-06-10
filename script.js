@@ -12,7 +12,6 @@ function createGrid(rows, cols, container) {
             square.className = "square";
             square.style.border = "1px solid black";
             square.style.flexGrow = "1";
-            square.innerText = j;
             verticalDiv.appendChild(square);
         }
         container.appendChild(verticalDiv);
