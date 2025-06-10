@@ -1,5 +1,12 @@
 const container = document.getElementById("container");
 
+createGrid(16, 16, container);
+document.querySelectorAll(".square").forEach((square) => {
+    square.addEventListener("mouseover", () => {
+        square.style.backgroundColor = "black";
+    });
+});
+
 // Create a grid of 16x16 squares
 function createGrid(rows, cols, container) {
     for (const i of Array(rows).keys()) {
@@ -17,10 +24,3 @@ function createGrid(rows, cols, container) {
         container.appendChild(verticalDiv);
     }
 }
-
-createGrid(16, 16, container);
-document.querySelectorAll(".square").forEach((square) => {
-    square.addEventListener("mouseover", () => {
-        square.style.backgroundColor = "black";
-    });
-});
